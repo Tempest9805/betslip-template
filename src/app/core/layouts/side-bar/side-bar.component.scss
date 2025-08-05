@@ -1,0 +1,29 @@
+.sidebar .sidebar-menu .menu-arrow {
+    right: -7px;
+}
+.sidebar, .sidebars{
+    background-color: #002054;
+}
+
+.sidebar .sidebar-menu .submenu-open .submenu ul li a.selected {
+    color: #f36f12;
+
+    &::after {
+        background: #FE9F43;
+        border: 2px solid #FDB;
+    }
+}
+
+.submenu_special{
+    a{
+        &::after {
+            display: none !important;
+        }
+    }
+}
+
+.normal-croll{
+    overflow-y: auto;
+    width: 100%;
+    min-height: 885px;
+}
