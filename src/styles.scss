@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@use './assets/styles/variables';
+@use './assets/styles/mixins';
+
+@use './assets/styles/main';
+
+@use './assets/styles/themes/light';
+@use './assets/styles/themes/dark';
+
+body {
+    background-color: var(--bs-body-bg);
+    color:            var(--bs-body-color);
+    font-family:      var(--bs-font-sans-serif);
+    font-size:        var(--bs-body-font-size);
+    line-height:      var(--bs-body-line-height);
+}
+:root, body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
