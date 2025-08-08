@@ -9,6 +9,10 @@ import { GetMethods, PostMethods } from '../../../common/endpoints';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { RouterLink } from '@angular/router';
 
+import { CentralLinesContainerComponent } from '../../layouts/central-lines-container/central-lines-container.component';
+import { BetsCartComponent } from '../../layouts/bets-cart/bets-cart.component';
+import { SideBarComponent } from '../../layouts/side-bar/side-bar.component';
+
 
 interface LineData {
   Description: string;
@@ -16,7 +20,7 @@ interface LineData {
 @Component({
   selector: 'app-sports',
   standalone: true,
-  imports: [ CommonModule, FormsModule, TranslateModule],
+  imports: [ CommonModule, FormsModule, TranslateModule, SideBarComponent, CentralLinesContainerComponent, BetsCartComponent],
   templateUrl: './sports.component.html',
   styleUrl: './sports.component.scss'
 })

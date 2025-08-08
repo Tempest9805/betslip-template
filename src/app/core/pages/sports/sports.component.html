@@ -1,1 +1,28 @@
-<h1>Hola sports</h1>
+<section class="container-fluid">
+    <div class="row gx-3">
+
+        <!-- SIDEBAR LEFT (desktop only) -->
+        <aside class="d-none d-lg-block col-lg-2">
+            <div class="position-sticky" style="top: var(--header-height, 72px);">
+                <!-- COMPONENTE: Sidebar (3 cuadros verticales) -->
+                <app-side-bar></app-side-bar>
+            </div>
+        </aside>
+
+        <!-- CENTER (main content) -->
+        <main class="col-12 col-lg-7">
+            <div class="card mb-3">
+                <div class="card-body p-3" style="min-height: 60vh;">
+                    <!-- COMPONENTE: Central lines (área ~60%) -->
+                    <central-lines-container></central-lines-container>
+                </div>
+            </div>
+        </main>
+
+        <!-- BETSLIP / RIGHT (desktop) -->
+        <aside class="col-12 col-lg-3">
+                    <app-bets-cart></app-bets-cart>
+        </aside>
+
+    </div>
+</section>

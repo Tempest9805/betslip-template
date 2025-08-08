@@ -1,51 +1,68 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar scroll</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Link
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Link</a>
-                </li>
-            </ul>
-            <button class="btn btn-outline-secondary" (click)="theme.toggle()">
-                <span *ngIf="!theme.isDark()">🌙</span>
-                <span *ngIf=" theme.isDark()">☀️</span>
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar scroll</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                aria-controls="offcanvasRight">Toggle right offcanvas</button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Link
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Link</a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-secondary" (click)="theme.toggle()">
+                    <span *ngIf="!theme.isDark()">🌙</span>
+                    <span *ngIf=" theme.isDark()">☀️</span>
+                </button>
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>
 
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="subheader" role="toolbar" aria-label="Subheader actions">
+        <div class="container-fluid d-flex align-items-center gap-3">
+            <!-- Ejemplo: tabs o filtros -->
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link active" href="#">Sports</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Live</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Racebook</a></li>
+            </ul>
+
+            <!-- Controles a la derecha -->
+            <div class="ms-auto">
+                <button class="btn btn-sm btn-outline-primary">Filtro</button>
+            </div>
         </div>
     </div>
-</nav>
-
+</header>
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
