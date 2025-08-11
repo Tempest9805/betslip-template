@@ -1,15 +1,7 @@
 <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar scroll</a>
-            <a class="avatar-header-size" type="button" data-bs-toggle="offcanvas" data-bs-target="#userCanvas"
-                aria-controls="userCanvas" aria-expanded="false" aria-label="Toggle navigation">
-                <img class="avatar-header-size" src="assets/img/avatar.png" alt="user">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                aria-controls="offcanvasRight" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand" href="#"><img src="assets/img/logo.svg" alt=""></a>
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                     <li class="nav-item">
@@ -36,16 +28,20 @@
                         <a class="nav-link disabled" aria-disabled="true">Link</a>
                     </li>
                 </ul>
-                <button class="btn btn-outline-secondary" (click)="theme.toggle()">
-                    <span *ngIf="!theme.isDark()">🌙</span>
-                    <span *ngIf=" theme.isDark()">☀️</span>
-                </button>
-
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
             </div>
+            <div class="d-flex align-items-center gap-3">
+                <a type="button" data-bs-toggle="offcanvas" data-bs-target="#userCanvas"
+                    aria-controls="userCanvas" aria-expanded="false" aria-label="Toggle navigation">
+                    <img class="avatar-header-size" src="assets/img/avatar.png" alt="user">
+                    <img class="drop_vector d-none d-md-inline" src="assets/img/drop_vector.svg" alt="vector">
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                    aria-controls="offcanvasRight" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
         </div>
     </nav>
 
@@ -57,11 +53,10 @@
                 <li class="nav-item"><a class="nav-link" href="#">Live</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Racebook</a></li>
             </ul>
-
-            <!-- Controles a la derecha -->
-            <div class="ms-auto">
-                <button class="btn btn-sm btn-outline-primary">Filtro</button>
-            </div>
+            <theme-toggle></theme-toggle>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            </form>
         </div>
     </div>
 </header>
@@ -78,8 +73,9 @@
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="userCanvas" aria-labelledby="userCanvasLabel">
     <div class="offcanvas-header">
-        <a data-bs-dismiss="offcanvas" aria-label="Close"><img src="assets/img/arrow-left.svg" alt="arrow"></a>
-        
+        <a class="arrow" data-bs-dismiss="offcanvas" aria-label="Close"><img src="assets/img/arrow-left.svg"
+                alt="arrow"></a>
+
     </div>
     <div class="offcanvas-body">
         ...

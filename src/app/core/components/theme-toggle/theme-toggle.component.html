@@ -1,0 +1,17 @@
+<label class="theme-switch compact">
+    <input type="checkbox" class="theme-switch__checkbox" (change)="onToggle($event)"
+    [checked]="theme.isDark()" />
+
+    <div class="theme-switch__container">
+        
+        <div class="theme-switch__circle-container">
+            <div class="theme-switch__sun-moon-container">
+                <div class="theme-switch__moon">
+                    <div class="theme-switch__spot"></div>
+                    <div class="theme-switch__spot"></div>
+                    <div class="theme-switch__spot"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</label>

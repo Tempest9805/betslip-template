@@ -7,10 +7,11 @@ import { Subscription } from 'rxjs';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { AuthService } from '../../../services/auth.service';
 import { ThemeService } from '../../../services/theme.service';
+import { ThemeToggleComponent } from '../../components/theme-toggle/theme-toggle.component';
 
 @Component({
   selector: 'app-header',
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, ThemeToggleComponent],
   standalone: true,
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'

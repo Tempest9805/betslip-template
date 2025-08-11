@@ -1,7 +1,9 @@
 .subheader {
+    --bs-link-color:           var(--app-subheader-text, var(--app-navbar-text));
+    --bs-link-hover-color:     var(--app-subheader-link-hover, var(--app-navbar-link-hover));
+    --bs-body-tertiary-color:  var(--app-subheader-text, var(--app-navbar-text));
     background-color: var(--app-subheader-bg, var(--app-navbar-bg));
-    color: var(--app-subheader-text, var(--app-navbar-text));
-    border-top: 1px solid var(--bs-border-color);
+    color:            var(--app-subheader-text, var(--app-navbar-text));
     padding: 0.5rem 0;
     z-index: 1020;
 }
@@ -20,4 +22,17 @@
 .avatar-header-size{
     width: 36px;
     height: 36px;
+    &:hover {
+        cursor: pointer;
+    }
 }
+.arrow{
+    &:hover {
+        cursor: pointer;
+    }
+}
+.drop_vector{
+    width: 10px;
+    height: 4.48px;
+}
+

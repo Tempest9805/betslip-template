@@ -9,6 +9,7 @@
     --bs-danger: #dc3545;
     --bs-light: #343a40;
     --bs-dark: #f8f9fa;
+    --bs-body-secundary-bg: #0b0b0b;
     --bs-body-tertiary-bg: #2c2f33;
     --bs-body-tertiary-color: #e9ecef;
     --bs-link-color: #f8f9fa;
@@ -19,6 +20,11 @@
     --app-navbar-bg:    #000;
     --app-navbar-text:  #fff;
     --app-navbar-link-hover: #ddd;
+
+    // subheader 
+    --app-subheader-bg: var(--bs-body-secundary-bg);
+    --app-subheader-text: var(--bs-body-tertiary-color);
+    --app-subheader-link-hover:var(--bs-link-hover-color);
 
     // hamburger icon
     --app-toggler-border: none;

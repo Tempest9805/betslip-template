@@ -9,16 +9,23 @@
     --bs-danger: #dc3545;
     --bs-light: #f8f9fa;
     --bs-dark: #212529;
+    --bs-body-secundary-bg: #0B4777;
     --bs-body-tertiary-bg: #031f3e;
     --bs-body-tertiary-color: #fff;
     --bs-link-color: #0d6efd;
-    --bs-link-hover-color: #0b5ed7;
+    --bs-link-hover-color: #04C8F3;
     --bs-border-color: #dee2e6;
+    
 
     // navbar
     --app-navbar-bg: var(--bs-body-tertiary-bg);
     --app-navbar-text: var(--bs-body-tertiary-color);
     --app-navbar-link-hover: var(--bs-link-hover-color);
+
+    // subheader 
+    --app-subheader-bg: var(--bs-body-secundary-bg);
+    --app-subheader-text: var(--bs-body-tertiary-color);
+    --app-subheader-link-hover:var(--bs-link-hover-color);
     
     // hamburger icon
     --app-toggler-border: none;
