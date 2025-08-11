@@ -19,4 +19,12 @@
     --app-navbar-bg:    #000;
     --app-navbar-text:  #fff;
     --app-navbar-link-hover: #ddd;
+
+    // hamburger icon
+    --app-toggler-border: none;
+    --app-toggler-bg: transparent;
+    --app-toggler-hover-bg: rgba(0, 0, 0, 0.04);
+    --app-toggler-line-color: var(--app-navbar-text);
+    --app-toggler-size-w: 1.5rem;
+    --app-toggler-size-h: 1.2rem;
 }

@@ -2,8 +2,12 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Navbar scroll</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="avatar-header-size" type="button" data-bs-toggle="offcanvas" data-bs-target="#userCanvas"
+                aria-controls="userCanvas" aria-expanded="false" aria-label="Toggle navigation">
+                <img class="avatar-header-size" src="assets/img/avatar.png" alt="user">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarScroll">
@@ -36,8 +40,6 @@
                     <span *ngIf="!theme.isDark()">🌙</span>
                     <span *ngIf=" theme.isDark()">☀️</span>
                 </button>
-                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>
 
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
@@ -68,6 +70,16 @@
     <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        ...
+    </div>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="userCanvas" aria-labelledby="userCanvasLabel">
+    <div class="offcanvas-header">
+        <a data-bs-dismiss="offcanvas" aria-label="Close"><img src="assets/img/arrow-left.svg" alt="arrow"></a>
+        
     </div>
     <div class="offcanvas-body">
         ...

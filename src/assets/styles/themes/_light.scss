@@ -9,14 +9,22 @@
     --bs-danger: #dc3545;
     --bs-light: #f8f9fa;
     --bs-dark: #212529;
-    --bs-body-tertiary-bg: #e9ecef;
-    --bs-body-tertiary-color: #212529;
+    --bs-body-tertiary-bg: #031f3e;
+    --bs-body-tertiary-color: #fff;
     --bs-link-color: #0d6efd;
     --bs-link-hover-color: #0b5ed7;
     --bs-border-color: #dee2e6;
 
     // navbar
-    --app-navbar-bg:    var(--bs-body-tertiary-bg);
-    --app-navbar-text:  var(--bs-body-color);
+    --app-navbar-bg: var(--bs-body-tertiary-bg);
+    --app-navbar-text: var(--bs-body-tertiary-color);
     --app-navbar-link-hover: var(--bs-link-hover-color);
+    
+    // hamburger icon
+    --app-toggler-border: none;
+    --app-toggler-bg: transparent;
+    --app-toggler-hover-bg: rgba(0, 0, 0, 0.04);
+    --app-toggler-line-color: var(--app-navbar-text);
+    --app-toggler-size-w: 1.5rem;
+    --app-toggler-size-h: 1.2rem;
 }

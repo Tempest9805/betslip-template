@@ -1,10 +1,10 @@
-@use './assets/styles/variables';
-@use './assets/styles/mixins';
+@use "./assets/styles/variables";
+@use "./assets/styles/mixins";
 
-@use './assets/styles/main';
+@use "./assets/styles/main";
 
-@use './assets/styles/themes/light';
-@use './assets/styles/themes/dark';
+@use "./assets/styles/themes/light";
+@use "./assets/styles/themes/dark";
 
 body {
     background-color: var(--bs-body-bg);
@@ -12,14 +12,13 @@ body {
     font-family: var(--bs-font-sans-serif);
     font-size: var(--bs-body-font-size);
     line-height: var(--bs-body-line-height);
-
 }
 
 :root,
 body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-
+// Overrides de bootstrap
 // navbar
 .navbar {
     background-color: var(--app-navbar-bg) !important;
@@ -39,4 +38,36 @@ body {
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
     color: var(--app-navbar-link-hover) !important;
+}
+
+.navbar-toggler {
+    border: var(--app-toggler-border) !important;
+    background: var(--app-toggler-bg) !important;
+    padding: 0.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.18s ease;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+    background-color: var(--app-toggler-hover-bg) !important;
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-toggler .navbar-toggler-icon,
+.navbar-toggler-icon {
+    width: var(--app-toggler-size-w);
+    height: var(--app-toggler-size-h);
+    display: inline-block;
+    position: relative;
+    color: var(--app-toggler-line-color);
+    background-image: linear-gradient(currentColor, currentColor),
+        linear-gradient(currentColor, currentColor),
+        linear-gradient(currentColor, currentColor);
+    background-size: 100% 2px;
+    background-repeat: no-repeat;
+    background-position: 0 0, 0 50%, 0 100%;
 }
