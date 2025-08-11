@@ -8,6 +8,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { AuthService } from '../../../services/auth.service';
 import { ThemeService } from '../../../services/theme.service';
 import { ThemeToggleComponent } from '../../components/theme-toggle/theme-toggle.component';
+import { LanguageService } from '../../../services/language.service';
 
 @Component({
   selector: 'app-header',
@@ -23,9 +24,11 @@ export class HeaderComponent implements OnInit {
   authService = inject(AuthService);
   ngZone = inject(NgZone);
   translate = inject(TranslateService);
+  languageService = inject(LanguageService);
   username: string = '';
 
   readonly theme = inject(ThemeService);
+
   private subscription$: Subscription = new Subscription();
 
   ngOnInit(): void {
@@ -35,6 +38,11 @@ export class HeaderComponent implements OnInit {
       this.username = user.Player;
     }
   }
+  get currentLanguage(): string {
+    return this.translate.currentLang;
+  }
+
+  changeLanguage = (lang: string) => this.languageService.setLanguage(lang);
 
   logout() {
     this.authService.logout();

@@ -22,7 +22,7 @@ export const provideTranslation = () => ({
 });
 
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+  return new TranslateHttpLoader(http, './assets/i18n/');
 }
 
 export const appConfig: ApplicationConfig = {
@@ -36,7 +36,15 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideHttpClient(withFetch(), withInterceptors([apiKeyInterceptor])),
-    importProvidersFrom([TranslateModule.forRoot(provideTranslation())])
-
+    importProvidersFrom(
+      TranslateModule.forRoot({
+        defaultLanguage: 'en',
+        loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+        }
+      })
+    )
   ]
 };

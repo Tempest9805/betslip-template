@@ -5,7 +5,7 @@
     background-color: var(--app-subheader-bg, var(--app-navbar-bg));
     color:            var(--app-subheader-text, var(--app-navbar-text));
     padding: 0.5rem 0;
-    z-index: 1020;
+    z-index: 999;
 }
 
 .navbar,
@@ -16,7 +16,7 @@
 .subheader.sticky {
     position: sticky;
     top: calc(var(--header-height, 56px));
-    z-index: 1020;
+    z-index: 999;
 }
 
 .avatar-header-size{
@@ -36,3 +36,44 @@
     height: 4.48px;
 }
 
+.btn-lan{
+    width: 80px;
+    height: 40px;
+    color: var(--bs-body-tertiary-color);
+}
+.subheader .m-items{
+    font-size: 10px;
+    strong{
+        font-weight: 700;
+        color: var(--bs-link-hover-color);
+    }
+}
+
+.btn-deposit{
+    background: var(--bs-success);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--bs-body-tertiary-color);
+    height: 20px;
+    width: 100%;
+    max-width: 106px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .btn-deposit{
+        height: 30px;
+        max-width: 150px;
+        font-size: 14px;
+    }
+    .subheader .m-items{
+        font-size: 14px;
+        strong{
+            font-weight: 700;
+            color: var(--bs-link-hover-color);
+        }
+    }
+}

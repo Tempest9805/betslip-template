@@ -25,17 +25,23 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Link</a>
+                        <a class="nav-link" aria-disabled="true">Link</a>
                     </li>
                 </ul>
             </div>
+            
+            <div class="m-items d-md-flex align-items-center justify-content-around d-none gap-3">
+                <span>{{ 'common.balance' | translate }}: <strong>$432,098.98</strong></span> |
+                <span>{{ 'common.freePlay' | translate }}: <strong>$432,098.98</strong></span>
+                <button class="btn btn-deposit">{{ 'common.deposit' | translate }}</button>    
+            </div>
             <div class="d-flex align-items-center gap-3">
-                <a type="button" data-bs-toggle="offcanvas" data-bs-target="#userCanvas"
-                    aria-controls="userCanvas" aria-expanded="false" aria-label="Toggle navigation">
+                <a type="button" data-bs-toggle="offcanvas" data-bs-target="#userCanvas" aria-controls="userCanvas"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <img class="avatar-header-size" src="assets/img/avatar.png" alt="user">
                     <img class="drop_vector d-none d-md-inline" src="assets/img/drop_vector.svg" alt="vector">
                 </a>
-                
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
                     aria-controls="offcanvasRight" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -46,17 +52,44 @@
     </nav>
 
     <div class="subheader" role="toolbar" aria-label="Subheader actions">
-        <div class="container-fluid d-flex align-items-center gap-3">
+        <div class="container-fluid d-flex align-items-center gap-3 justify-content-between w-100">
             <!-- Ejemplo: tabs o filtros -->
-            <ul class="nav">
-                <li class="nav-item"><a class="nav-link active" href="#">Sports</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Live</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Racebook</a></li>
-            </ul>
-            <theme-toggle></theme-toggle>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            </form>
+            <div class="d-none d-md-block">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link active" href="#">Sports</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Live</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Racebook</a></li>
+                </ul>
+            </div>
+            <div class="m-items d-flex align-items-center justify-content-around d-md-none w-100">
+                <span>{{ 'common.balance' | translate }}: <strong>$432,098.98</strong></span> |
+                <span>{{ 'common.freePlay' | translate }}: <strong>$432,098.98</strong></span>
+                <button class="btn btn-deposit">{{ 'common.deposit' | translate }}</button>    
+            </div>
+            <div class=" align-items-center gap-3 d-none d-md-flex">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                </form>
+                <theme-toggle></theme-toggle>
+                <div class="dropdown g-3">
+                    <button class="btn btn-lan dropdown-toggle d-flex align-items-center" type="button"
+                        id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="assets/img/global.svg" class="me-2">
+                        {{ currentLanguage | uppercase }}
+                    </button>
+    
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <li *ngFor="let lang of languageService.availableLanguages">
+                            <a class="dropdown-item d-flex align-items-center" href="#"
+                                (click)="changeLanguage(lang.code); $event.preventDefault()"
+                                [class.active]="lang.code === currentLanguage">
+                                {{ lang.name }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
         </div>
     </div>
 </header>
