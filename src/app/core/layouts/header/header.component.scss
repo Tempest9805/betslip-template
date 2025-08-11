@@ -43,6 +43,7 @@
 }
 .subheader .m-items{
     font-size: 10px;
+    
     strong{
         font-weight: 700;
         color: var(--bs-link-hover-color);
@@ -69,8 +70,16 @@
         max-width: 150px;
         font-size: 14px;
     }
+    .m-items {
+        max-width: 564px;
+        strong{
+            font-weight: 700;
+            color: var(--bs-link-hover-color);
+        }
+    }
     .subheader .m-items{
         font-size: 14px;
+        
         strong{
             font-weight: 700;
             color: var(--bs-link-hover-color);
