@@ -8,14 +8,12 @@ export class NavigationService {
   private http = inject(HttpClient);
   private readonly url = 'assets/data.json';
 
-  // cache único y normalizado
   private data$ = this.http.get<any>(this.url).pipe(
     map(d => this.normalize(d || {})),
     shareReplay({ bufferSize: 1, refCount: false }),
     catchError(() => of({}))
   );
 
-  // devuelve cualquier colección (por clave). opcional: ordenar por 'order'
   getCollection(key: string, sort = false): Observable<any[]> {
     return this.data$.pipe(
       map(data => {
@@ -25,10 +23,9 @@ export class NavigationService {
     );
   }
 
-  // conveniencias
+
   getHeaderItems() { return this.getCollection('headerItems', true); }
   getSubheaderItems() {
-    // admite ambos nombres comunes
     return this.getCollectionExists(['subHeaderItems','subheaderItems']);
   }
 
@@ -38,7 +35,7 @@ export class NavigationService {
     return this.getCollection(collectionKey).pipe(map(items => (items || []).find((x: any) => x.id === id)));
   }
 
-  // --- internals simples ---
+
   private getCollectionExists(keys: string[], sort = true) {
     return this.data$.pipe(
       map(data => {
