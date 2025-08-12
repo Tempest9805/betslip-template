@@ -85,3 +85,7 @@ body {
     border: none !important;
     color: var(--bs-body-tertiary-color) !important;
 }
+.form-control::placeholder {
+    color: var(--bs-secondary);
+    opacity: 1;
+}
