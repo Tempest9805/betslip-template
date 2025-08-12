@@ -79,3 +79,9 @@ body {
     background-repeat: no-repeat;
     background-position: 0 0, 0 50%, 0 100%;
 }
+
+.form-control{
+    background-color: var(--bs-search-bg) !important;
+    border: none !important;
+    color: var(--bs-body-tertiary-color) !important;
+}
