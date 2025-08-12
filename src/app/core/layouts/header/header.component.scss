@@ -1,3 +1,9 @@
+
+.logo{
+    width: 170px;
+    height: auto;
+}
+
 .subheader {
     --bs-link-color:           var(--app-subheader-text, var(--app-navbar-text));
     --bs-link-hover-color:     var(--app-subheader-link-hover, var(--app-navbar-link-hover));
@@ -63,6 +69,20 @@
     align-items: center;
     justify-content: center;
 }
+.nav-item .nav-link {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.nav-item .separator{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    color: var(--bs-separator);
+}
+.nav-item:last-child .separator {
+    display: none;
+}
 
 @media (min-width: 768px) {
     .btn-deposit{
@@ -84,5 +104,9 @@
             font-weight: 700;
             color: var(--bs-link-hover-color);
         }
+    }
+    .avatar-header-size{
+        width: 48px;
+        height: 48px;
     }
 }

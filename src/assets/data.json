@@ -1,0 +1,374 @@
+{
+    "headerItems": [
+        
+        {
+            "labelKey": "header.sports", 
+            "label": "Sportsbook",
+            "route": "/sports",
+            "icon": "",
+            "order": 1
+        },
+        {
+            "labelKey": "header.casino", 
+            "label": "Casino",
+            "route": "/casino",
+            "icon": "",
+            "order": 2
+        },
+        {
+            "labelKey": "header.liveCasino", 
+            "label": "Live Casino",
+            "route": "/live-casino",
+            "icon": "",
+            "order": 3
+        },
+        {
+            "labelKey": "header.racebook", 
+            "label": "Racebook",
+            "route": "/racebook",
+            "icon": "",
+            "order": 4
+        },
+        {
+            "labelKey": "header.esports", 
+            "label": "Esports", 
+            "route": "/esports", 
+            "order": 5
+        },
+        {
+            "labelKey": "header.more", 
+            "label": "More",
+            "route": "/more",
+            "icon": "assets/img/more.svg",
+            "order": 6
+        }
+    ],
+    "subHeaderItems": [
+        
+        {
+            "labelKey": "subHeader.scores", 
+            "label": "Scores",
+            "route": "/scores",
+            "icon": "",
+            "order": 1
+        },
+        {
+            "labelKey": "subHeader.promos", 
+            "label": "Promos",
+            "route": "/promos",
+            "icon": "",
+            "order": 2
+        },
+        {
+            "labelKey": "subHeader.pendingB", 
+            "label": "Pending Bets",
+            "route": "/pending-bets",
+            "icon": "",
+            "order": 3
+        },
+        {
+            "labelKey": "subHeader.cashier", 
+            "label": "Cashier",
+            "route": "/cashier",
+            "icon": "",
+            "order": 4
+        },
+        {
+            "labelKey": "subHeader.help", 
+            "label": "Help",
+            "route": "/help",
+            "icon": "",
+            "order": 5
+        }
+    ],
+    "subheaderItems": [
+        {
+            "id": "s1",
+            "label": "All Sports",
+            "type": "filter",
+            "order": 1
+        },
+        {
+            "id": "s2",
+            "label": "Popular",
+            "type": "filter",
+            "order": 2
+        },
+        {
+            "id": "s3",
+            "label": "Today",
+            "type": "filter",
+            "order": 3
+        },
+        {
+            "id": "s4",
+            "label": "In-Play",
+            "type": "filter",
+            "order": 4
+        },
+        {
+            "id": "s5",
+            "label": "Upcoming",
+            "type": "filter",
+            "order": 5
+        }
+    ],
+    "sportsCategories": [
+        {
+            "sportId": "soccer",
+            "sportName": "Soccer",
+            "icon": "soccer-ball",
+            "leagues": [
+                {
+                    "leagueId": "eng_premier",
+                    "leagueName": "Premier League",
+                    "country": "England",
+                    "competitions": [
+                        {
+                            "competitionId": "pl_2024",
+                            "competitionName": "Premier League 2024",
+                            "season": "2024",
+                            "events": [
+                                {
+                                    "eventId": "ev-1001",
+                                    "home": "Arsenal",
+                                    "away": "Liverpool",
+                                    "startTime": "2025-08-10T16:00:00Z",
+                                    "markets": [
+                                        {
+                                            "marketId": "m1",
+                                            "name": "Match Winner",
+                                            "selections": [
+                                                {
+                                                    "selId": "s1",
+                                                    "name": "Arsenal",
+                                                    "odds": 1.95
+                                                },
+                                                {
+                                                    "selId": "s2",
+                                                    "name": "Draw",
+                                                    "odds": 3.6
+                                                },
+                                                {
+                                                    "selId": "s3",
+                                                    "name": "Liverpool",
+                                                    "odds": 3.2
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "marketId": "m2",
+                                            "name": "Over/Under 2.5",
+                                            "selections": [
+                                                {
+                                                    "selId": "u1",
+                                                    "name": "Over 2.5",
+                                                    "odds": 1.8
+                                                },
+                                                {
+                                                    "selId": "u2",
+                                                    "name": "Under 2.5",
+                                                    "odds": 2.0
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "eventId": "ev-1002",
+                                    "home": "Man City",
+                                    "away": "Chelsea",
+                                    "startTime": "2025-08-11T18:30:00Z",
+                                    "markets": [
+                                        {
+                                            "marketId": "m3",
+                                            "name": "Match Winner",
+                                            "selections": [
+                                                {
+                                                    "selId": "s4",
+                                                    "name": "Man City",
+                                                    "odds": 1.7
+                                                },
+                                                {
+                                                    "selId": "s5",
+                                                    "name": "Draw",
+                                                    "odds": 4.0
+                                                },
+                                                {
+                                                    "selId": "s6",
+                                                    "name": "Chelsea",
+                                                    "odds": 5.0
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "competitionId": "pl_cup",
+                            "competitionName": "League Cup",
+                            "season": "2024-25",
+                            "events": []
+                        }
+                    ]
+                },
+                {
+                    "leagueId": "esp_laLiga",
+                    "leagueName": "La Liga",
+                    "country": "Spain",
+                    "competitions": [
+                        {
+                            "competitionId": "ll_2024",
+                            "competitionName": "LaLiga 2024",
+                            "season": "2024",
+                            "events": [
+                                {
+                                    "eventId": "ev-1101",
+                                    "home": "Real Madrid",
+                                    "away": "Barcelona",
+                                    "startTime": "2025-09-01T19:00:00Z",
+                                    "markets": [
+                                        {
+                                            "marketId": "m10",
+                                            "name": "Match Winner",
+                                            "selections": [
+                                                {
+                                                    "selId": "s10",
+                                                    "name": "Real Madrid",
+                                                    "odds": 2.1
+                                                },
+                                                {
+                                                    "selId": "s11",
+                                                    "name": "Draw",
+                                                    "odds": 3.4
+                                                },
+                                                {
+                                                    "selId": "s12",
+                                                    "name": "Barcelona",
+                                                    "odds": 2.8
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "sportId": "basketball",
+            "sportName": "Basketball",
+            "icon": "basket-ball",
+            "leagues": [
+                {
+                    "leagueId": "nba",
+                    "leagueName": "NBA",
+                    "country": "USA",
+                    "competitions": [
+                        {
+                            "competitionId": "nba_2024",
+                            "competitionName": "NBA Regular Season 2024",
+                            "season": "2024",
+                            "events": [
+                                {
+                                    "eventId": "ev-2001",
+                                    "home": "Lakers",
+                                    "away": "Warriors",
+                                    "startTime": "2025-10-22T02:00:00Z",
+                                    "markets": [
+                                        {
+                                            "marketId": "mb1",
+                                            "name": "Moneyline",
+                                            "selections": [
+                                                {
+                                                    "selId": "sb1",
+                                                    "name": "Lakers",
+                                                    "odds": 2.05
+                                                },
+                                                {
+                                                    "selId": "sb2",
+                                                    "name": "Warriors",
+                                                    "odds": 1.8
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "marketId": "mb2",
+                                            "name": "Spread",
+                                            "selections": [
+                                                {
+                                                    "selId": "sb3",
+                                                    "name": "Lakers -3.5",
+                                                    "odds": 1.9
+                                                },
+                                                {
+                                                    "selId": "sb4",
+                                                    "name": "Warriors +3.5",
+                                                    "odds": 1.9
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "leagueId": "euroleague",
+                    "leagueName": "EuroLeague",
+                    "country": "EU",
+                    "competitions": []
+                }
+            ]
+        },
+        {
+            "sportId": "tennis",
+            "sportName": "Tennis",
+            "icon": "tennis",
+            "leagues": [
+                {
+                    "leagueId": "atp",
+                    "leagueName": "ATP Tour",
+                    "country": "International",
+                    "competitions": [
+                        {
+                            "competitionId": "atp_open",
+                            "competitionName": "ATP 500 Series",
+                            "season": "2025",
+                            "events": [
+                                {
+                                    "eventId": "ev-3001",
+                                    "home": "Nadal",
+                                    "away": "Medvedev",
+                                    "startTime": "2025-07-05T14:00:00Z",
+                                    "markets": [
+                                        {
+                                            "marketId": "mt1",
+                                            "name": "Match Winner",
+                                            "selections": [
+                                                {
+                                                    "selId": "st1",
+                                                    "name": "Nadal",
+                                                    "odds": 2.45
+                                                },
+                                                {
+                                                    "selId": "st2",
+                                                    "name": "Medvedev",
+                                                    "odds": 1.55
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

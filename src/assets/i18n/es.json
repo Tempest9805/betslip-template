@@ -1,4 +1,19 @@
 {
+    "header": {
+        "sports": "Apuestas deportivas",
+        "casino": "Casino",
+        "liveCasino": "Casino en Vivo",
+        "racebook": "Hipismo",
+        "esports": "Esports",
+        "more": "Más..."
+    },
+    "subHeader": {
+        "scores": "Scores",
+        "promos": "Promos",
+        "pendingB": "Pending Bets",
+        "cashier": "Cashier",
+        "help": "Help"
+    },
     "common": {
         "sports": "Sports",
         "main": "Main",

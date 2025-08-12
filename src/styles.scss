@@ -26,6 +26,9 @@ body {
 // navbar
 .navbar {
     background-color: var(--app-navbar-bg) !important;
+    @media (min-width: 768px) {
+        height: 70px !important
+    }
 }
 
 /* Texto general y brand */
@@ -42,6 +45,7 @@ body {
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
     color: var(--app-navbar-link-hover) !important;
+    text-decoration: underline;
 }
 
 .navbar-toggler {

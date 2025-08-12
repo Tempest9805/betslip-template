@@ -1,39 +1,21 @@
 <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="assets/img/logo.svg" alt=""></a>
+            <a class="navbar-brand me-4 ms-4" href="#"><img class="logo" src="assets/img/logo.svg" alt=""></a>
             <div class="collapse navbar-collapse" id="navbarScroll">
-                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Link
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-disabled="true">Link</a>
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+                    <li class="nav-item d-flex align-items-center"
+                        *ngFor="let item of (headerItems$ | async); trackBy: trackById">
+                        <a class="nav-link" [href]="item.route || '#'">{{ item.labelKey ? (item.labelKey | translate) :
+                            (item.label || '—') }}</a><span class="separator">|</span>
                     </li>
                 </ul>
             </div>
-            
-            <div class="m-items d-md-flex align-items-center justify-content-around d-none gap-3 w-100">
+
+            <div class="m-items me-3 d-md-flex align-items-center justify-content-around d-none gap-3 w-100">
                 <span>{{ 'common.balance' | translate }}: <strong>$432,098.98</strong></span> |
                 <span>{{ 'common.freePlay' | translate }}: <strong>$432,098.98</strong></span>
-                <button class="btn btn-deposit">{{ 'common.deposit' | translate }}</button>    
+                <button class="btn btn-deposit">{{ 'common.deposit' | translate }}</button>
             </div>
             <div class="d-flex align-items-center gap-3">
                 <a type="button" data-bs-toggle="offcanvas" data-bs-target="#userCanvas" aria-controls="userCanvas"
@@ -56,15 +38,17 @@
             <!-- Ejemplo: tabs o filtros -->
             <div class="d-none d-md-block">
                 <ul class="nav">
-                    <li class="nav-item"><a class="nav-link active" href="#">Sports</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Live</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Racebook</a></li>
+                    <li class="nav-item" *ngFor="let s of (subHeaderItems$ | async); trackBy: trackById">
+                        <a class="nav-link" [href]="s.route || '#'">
+                            {{ s.labelKey ? (s.labelKey | translate) : (s.label || '—') }}
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="m-items d-flex align-items-center justify-content-around d-md-none w-100">
                 <span>{{ 'common.balance' | translate }}: <strong>$432,098.98</strong></span> |
                 <span>{{ 'common.freePlay' | translate }}: <strong>$432,098.98</strong></span>
-                <button class="btn btn-deposit">{{ 'common.deposit' | translate }}</button>    
+                <button class="btn btn-deposit">{{ 'common.deposit' | translate }}</button>
             </div>
             <div class=" align-items-center gap-3 d-none d-md-flex">
                 <form class="d-flex" role="search">
@@ -77,7 +61,7 @@
                         <img src="assets/img/global.svg" class="me-2">
                         {{ currentLanguage | uppercase }}
                     </button>
-    
+
                     <ul class="dropdown-menu" aria-labelledby="languageDropdown">
                         <li *ngFor="let lang of languageService.availableLanguages">
                             <a class="dropdown-item d-flex align-items-center" href="#"
@@ -89,7 +73,7 @@
                     </ul>
                 </div>
             </div>
-            
+
         </div>
     </div>
 </header>
