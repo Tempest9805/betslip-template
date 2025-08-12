@@ -1,0 +1,112 @@
+.logo {
+  width: 170px;
+  height: auto;
+}
+
+.subheader {
+  --bs-link-color: var(--app-subheader-text, var(--app-navbar-text));
+  --bs-link-hover-color: var(--app-subheader-link-hover, var(--app-navbar-link-hover));
+  --bs-body-tertiary-color: var(--app-subheader-text, var(--app-navbar-text));
+  background-color: var(--app-subheader-bg, var(--app-navbar-bg));
+  color: var(--app-subheader-text, var(--app-navbar-text));
+  padding: 0.5rem 0;
+  z-index: 999;
+}
+
+.navbar,
+.subheader {
+  position: relative;
+}
+
+.subheader.sticky {
+  position: sticky;
+  top: calc(var(--header-height, 56px));
+  z-index: 999;
+}
+
+.avatar-header-size {
+  width: 36px;
+  height: 36px;
+}
+.avatar-header-size:hover {
+  cursor: pointer;
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+
+.drop_vector {
+  width: 10px;
+  height: 4.48px;
+}
+
+.btn-lan {
+  width: 80px;
+  height: 40px;
+  color: var(--bs-body-tertiary-color);
+}
+
+.subheader .m-items {
+  font-size: 10px;
+}
+.subheader .m-items strong {
+  font-weight: 700;
+  color: var(--bs-link-hover-color);
+}
+
+.btn-deposit {
+  background: var(--bs-success);
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--bs-body-tertiary-color);
+  height: 20px;
+  width: 100%;
+  max-width: 106px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-item .nav-link {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.nav-item .separator {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  color: var(--bs-separator);
+}
+
+.nav-item:last-child .separator {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .btn-deposit {
+    height: 30px;
+    max-width: 150px;
+    font-size: 14px;
+  }
+  .m-items {
+    max-width: 564px;
+  }
+  .m-items strong {
+    font-weight: 700;
+    color: var(--bs-link-hover-color);
+  }
+  .subheader .m-items {
+    font-size: 14px;
+  }
+  .subheader .m-items strong {
+    font-weight: 700;
+    color: var(--bs-link-hover-color);
+  }
+  .avatar-header-size {
+    width: 48px;
+    height: 48px;
+  }
+}/*# sourceMappingURL=header.component.css.map */
