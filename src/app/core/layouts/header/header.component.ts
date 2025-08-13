@@ -33,9 +33,10 @@ export class HeaderComponent implements OnInit {
   private subscription$: Subscription = new Subscription();
   
   private nav = inject(NavigationService);
-
+  brand$ = this.nav.getBrandLogo();
   headerItems$: Observable<any[]> = this.nav.getHeaderItems();
   subHeaderItems$: Observable<any[]> = this.nav.getSubheaderItems();
+
   trackById(_: number, item: any) {
     return item?.id ?? item?.label;
   }

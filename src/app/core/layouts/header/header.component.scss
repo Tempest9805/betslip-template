@@ -83,7 +83,11 @@
 .nav-item:last-child .separator {
     display: none;
 }
-
+.search-icon{
+    top: .5rem;
+    left: .7rem;
+    position: absolute;
+}
 @media (min-width: 768px) {
     .btn-deposit{
         height: 30px;

@@ -1,7 +1,10 @@
 <header>
+    <!-- primary nav -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand me-4 ms-4" href="#"><img class="logo" src="assets/img/logo.svg" alt=""></a>
+            <a class="navbar-brand me-4 ms-4" [href]="(brand$ | async)?.href">
+                <img class="logo" [src]="(brand$ | async)?.logo" [alt]="(brand$ | async)?.alt || 'logo'">
+            </a>
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
                     <li class="nav-item d-flex align-items-center"
@@ -32,10 +35,9 @@
 
         </div>
     </nav>
-
+    <!-- subheader -->
     <div class="subheader" role="toolbar" aria-label="Subheader actions">
         <div class="container-fluid d-flex align-items-center gap-3 justify-content-between w-100">
-            <!-- Ejemplo: tabs o filtros -->
             <div class="d-none d-md-block">
                 <ul class="nav">
                     <li class="nav-item" *ngFor="let s of (subHeaderItems$ | async); trackBy: trackById">
@@ -51,9 +53,9 @@
                 <button class="btn btn-deposit">{{ 'common.deposit' | translate }}</button>
             </div>
             <div class=" align-items-center gap-3 d-none d-md-flex">
-                <form class="d-flex" role="search">
-                    <img class="" src="assets/img/search.svg" alt="">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <form class="d-flex position-relative" role="search">
+                    <img class="search-icon" src="assets/img/search.svg" alt="">
+                    <input class="form-control form-control-search me-2" type="search" placeholder="Search" aria-label="Search" />
                 </form>
                 <theme-toggle></theme-toggle>
                 <div class="dropdown g-3">

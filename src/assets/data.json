@@ -1,4 +1,9 @@
 {
+    "brand": {
+        "href": "/",
+        "logo": "assets/img/logo.svg",
+        "alt": "Mi Marca"
+    },
     "headerItems": [
         
         {
@@ -78,38 +83,6 @@
             "label": "Help",
             "route": "/help",
             "icon": "",
-            "order": 5
-        }
-    ],
-    "subheaderItems": [
-        {
-            "id": "s1",
-            "label": "All Sports",
-            "type": "filter",
-            "order": 1
-        },
-        {
-            "id": "s2",
-            "label": "Popular",
-            "type": "filter",
-            "order": 2
-        },
-        {
-            "id": "s3",
-            "label": "Today",
-            "type": "filter",
-            "order": 3
-        },
-        {
-            "id": "s4",
-            "label": "In-Play",
-            "type": "filter",
-            "order": 4
-        },
-        {
-            "id": "s5",
-            "label": "Upcoming",
-            "type": "filter",
             "order": 5
         }
     ],

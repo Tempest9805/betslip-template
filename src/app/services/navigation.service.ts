@@ -23,7 +23,7 @@ export class NavigationService {
     );
   }
 
-
+  getBrandLogo() { return this.data$.pipe(map(d => d?.brand ?? null)); }
   getHeaderItems() { return this.getCollection('headerItems', true); }
   getSubheaderItems() {
     return this.getCollectionExists(['subHeaderItems','subheaderItems']);
