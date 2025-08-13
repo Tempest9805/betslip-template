@@ -1,1 +1,68 @@
-<h1>sidebar works</h1>
+<nav class="app-sidebar">
+    <ul class="list-unstyled m-0 p-0">
+        <!-- Nivel 1: sports -->
+        <li *ngFor="let sport of (sports$ | async); trackBy: trackById" class="mb-2">
+            <!-- boton que abre/cierra collapse del sport -->
+            <button class="btn btn-link w-100 text-start d-flex justify-content-between align-items-center p-0"
+                type="button" [attr.data-bs-toggle]="'collapse'"
+                [attr.data-bs-target]="'#collapse-sport-' + (sport.sportId || sport.id)"
+                [attr.aria-controls]="'collapse-sport-' + (sport.sportId || sport.id)" aria-expanded="false">
+                <span>{{ sport.sportName }}</span>
+                <small class="toggle-icon">+</small>
+            </button>
+
+            <!-- contenido del sport: leagues -->
+            <div [id]="'collapse-sport-' + (sport.sportId || sport.id)" class="collapse mt-2">
+                <ul class="list-unstyled ps-3 mb-1">
+                    <!-- Nivel 2: leagues -->
+                    <li *ngFor="let league of (sport.leagues || []); trackBy: trackById" class="mb-1">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <button class="btn btn-sm btn-link p-0 text-start" type="button"
+                                [attr.data-bs-toggle]="'collapse'"
+                                [attr.data-bs-target]="'#collapse-league-' + (league.leagueId || league.id)"
+                                [attr.aria-controls]="'collapse-league-' + (league.leagueId || league.id)"
+                                aria-expanded="false">
+                                {{ league.leagueName }}
+                            </button>
+                            <small class="toggle-icon">+</small>
+                        </div>
+
+                        <!-- contenido de league: competitions -->
+                        <div [id]="'collapse-league-' + (league.leagueId || league.id)" class="collapse mt-1 ps-2">
+                            <ul class="list-unstyled">
+                                <!-- Nivel 3: competitions -->
+                                <li *ngFor="let comp of (league.competitions || []); trackBy: trackById" class="mb-1">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <button class="btn btn-xxs btn-link p-0 text-start" type="button"
+                                            [attr.data-bs-toggle]="'collapse'"
+                                            [attr.data-bs-target]="'#collapse-comp-' + (comp.competitionId || comp.id)"
+                                            [attr.aria-controls]="'collapse-comp-' + (comp.competitionId || comp.id)"
+                                            aria-expanded="false">
+                                            {{ comp.competitionName }}
+                                        </button>
+                                        <small class="toggle-icon">+</small>
+                                    </div>
+
+                                    <!-- contenido de competition: events (se muestra al abrir comp) -->
+                                    <div [id]="'collapse-comp-' + (comp.competitionId || comp.id)"
+                                        class="collapse mt-1 ps-3 small text-muted">
+                                        <div *ngIf="(comp.events || []).length; else noEvents">
+                                            <div *ngFor="let ev of comp.events">
+                                                {{ ev.home }} vs {{ ev.away }} — {{ ev.startTime | date:'short' }}
+                                            </div>
+                                        </div>
+                                        <ng-template #noEvents>
+                                            <div>No events</div>
+                                        </ng-template>
+                                    </div>
+
+                                </li>
+                            </ul>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</nav>
