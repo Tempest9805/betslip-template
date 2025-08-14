@@ -27,8 +27,10 @@
                     type="button" [attr.data-bs-toggle]="'collapse'"
                     [attr.data-bs-target]="'#collapse-sport-' + sport.id"
                     [attr.aria-controls]="'collapse-sport-' + sport.id" aria-expanded="false">
+                    <img *ngIf="sport.icon" [src]="sport.icon" alt="{{sport.sportName}}" class="item-icon" />
                     <span>{{ sport.sportName }}</span>
-                    <small class="toggle-icon">+</small>
+                    
+                    <i class="bi bi-chevron-down toggle-icon" aria-hidden="true"></i>
                 </button>
 
                 <div [id]="'collapse-sport-' + sport.id" class="collapse mt-2 ps-2 collapse-bg">
@@ -39,8 +41,9 @@
                                 type="button" [attr.data-bs-toggle]="'collapse'"
                                 [attr.data-bs-target]="'#collapse-league-' + league.id"
                                 [attr.aria-controls]="'collapse-league-' + league.id" aria-expanded="false">
+                                <img *ngIf="sport.icon" [src]="sport.icon" alt="{{sport.sportName}}" class="item-icon" />
                                 <span class="ms-1">{{ league.leagueName }}</span>
-                                <small class="toggle-icon">+</small>
+                                <i class="bi bi-chevron-down toggle-icon" aria-hidden="true"></i>
                             </button>
 
                             <div [id]="'collapse-league-' + league.id" class="collapse mt-1 ps-3">
@@ -52,8 +55,9 @@
                                             type="button" [attr.data-bs-toggle]="'collapse'"
                                             [attr.data-bs-target]="'#collapse-comp-' + comp.id"
                                             [attr.aria-controls]="'collapse-comp-' + comp.id" aria-expanded="false">
+                                            <img *ngIf="sport.icon" [src]="sport.icon" alt="{{sport.sportName}}" class="item-icon" />
                                             <span class="ms-2">{{ comp.competitionName }}</span>
-                                            <small class="toggle-icon">+</small>
+                                            <i class="bi bi-chevron-down toggle-icon" aria-hidden="true"></i>
                                         </button>
 
                                         <div [id]="'collapse-comp-' + comp.id"
