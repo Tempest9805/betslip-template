@@ -28,6 +28,12 @@ export class NavigationService {
   getSubheaderItems() {
     return this.getCollectionExists(['subHeaderItems','subheaderItems']);
   }
+  getOtherLinks() {
+    return this.getCollection('otherLinks', true);
+  }
+  getEventsOfDay() {
+    return this.getCollection('eventsOfDay', true);
+  }
 
   getAll() { return this.data$; }
 

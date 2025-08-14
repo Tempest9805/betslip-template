@@ -4,44 +4,79 @@
         "logo": "assets/img/logo.svg",
         "alt": "Mi Marca"
     },
-    "headerItems": [
-        
+    "eventsOfDay": [
         {
-            "labelKey": "header.sports", 
+            "eventId": "ev-x1",
+            "home": "Arsenal",
+            "away": "City",
+            "startTime": "2025-08-10T16:00:00Z",
+            "sport": "Soccer"
+        },
+        {
+            "eventId": "ev-x2",
+            "home": "Lakers",
+            "away": "Warriors",
+            "startTime": "2025-10-22T02:00:00Z",
+            "sport": "Basketball"
+        }
+    ],
+    "otherLinks": [
+        {
+            "label": "Rules",
+            "route": "/rules",
+            "icon": "assets/img/rules.svg",
+            "order": 1
+        },
+        {
+            "label": "Responsible Gaming",
+            "route": "/responsible",
+            "icon": "assets/img/responsible.svg",
+            "order": 2
+        },
+        {
+            "label": "Help",
+            "route": "/help",
+            "icon": "assets/img/help.svg",
+            "order": 3
+        }
+    ],
+    "headerItems": [
+        {
+            "labelKey": "header.sports",
             "label": "Sportsbook",
             "route": "/sports",
             "icon": "",
             "order": 1
         },
         {
-            "labelKey": "header.casino", 
+            "labelKey": "header.casino",
             "label": "Casino",
             "route": "/casino",
             "icon": "",
             "order": 2
         },
         {
-            "labelKey": "header.liveCasino", 
+            "labelKey": "header.liveCasino",
             "label": "Live Casino",
             "route": "/live-casino",
             "icon": "",
             "order": 3
         },
         {
-            "labelKey": "header.racebook", 
+            "labelKey": "header.racebook",
             "label": "Racebook",
             "route": "/racebook",
             "icon": "",
             "order": 4
         },
         {
-            "labelKey": "header.esports", 
-            "label": "Esports", 
-            "route": "/esports", 
+            "labelKey": "header.esports",
+            "label": "Esports",
+            "route": "/esports",
             "order": 5
         },
         {
-            "labelKey": "header.more", 
+            "labelKey": "header.more",
             "label": "More",
             "route": "/more",
             "icon": "assets/img/more.svg",
@@ -49,37 +84,36 @@
         }
     ],
     "subHeaderItems": [
-        
         {
-            "labelKey": "subHeader.scores", 
+            "labelKey": "subHeader.scores",
             "label": "Scores",
             "route": "/scores",
             "icon": "",
             "order": 1
         },
         {
-            "labelKey": "subHeader.promos", 
+            "labelKey": "subHeader.promos",
             "label": "Promos",
             "route": "/promos",
             "icon": "",
             "order": 2
         },
         {
-            "labelKey": "subHeader.pendingB", 
+            "labelKey": "subHeader.pendingB",
             "label": "Pending Bets",
             "route": "/pending-bets",
             "icon": "",
             "order": 3
         },
         {
-            "labelKey": "subHeader.cashier", 
+            "labelKey": "subHeader.cashier",
             "label": "Cashier",
             "route": "/cashier",
             "icon": "",
             "order": 4
         },
         {
-            "labelKey": "subHeader.help", 
+            "labelKey": "subHeader.help",
             "label": "Help",
             "route": "/help",
             "icon": "",
