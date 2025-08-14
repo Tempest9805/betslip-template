@@ -7,6 +7,8 @@
         <ul class="list-container mb-0">
             <li *ngFor="let ev of (eventsOfDay$ | async); trackBy: trackById" class="py-1 line">
                 <a class="d-flex align-items-center gap-2 text-decoration-none small p-2 item" href="#">
+                    <img *ngIf="ev.icon" [src]="ev.icon" alt="{{ev.icon}}" class="item-icon" />
+
                     <span class="event-time">{{ ev.startTime | date:'shortTime' }}</span>
                     <span class="event-text">{{ ev.home }} vs {{ ev.away }}</span>
                 </a>
@@ -41,7 +43,6 @@
                                 type="button" [attr.data-bs-toggle]="'collapse'"
                                 [attr.data-bs-target]="'#collapse-league-' + league.id"
                                 [attr.aria-controls]="'collapse-league-' + league.id" aria-expanded="false">
-                                <img *ngIf="sport.icon" [src]="sport.icon" alt="{{sport.sportName}}" class="item-icon" />
                                 <span class="ms-1">{{ league.leagueName }}</span>
                                 <i class="bi bi-chevron-down toggle-icon" aria-hidden="true"></i>
                             </button>
@@ -55,7 +56,6 @@
                                             type="button" [attr.data-bs-toggle]="'collapse'"
                                             [attr.data-bs-target]="'#collapse-comp-' + comp.id"
                                             [attr.aria-controls]="'collapse-comp-' + comp.id" aria-expanded="false">
-                                            <img *ngIf="sport.icon" [src]="sport.icon" alt="{{sport.sportName}}" class="item-icon" />
                                             <span class="ms-2">{{ comp.competitionName }}</span>
                                             <i class="bi bi-chevron-down toggle-icon" aria-hidden="true"></i>
                                         </button>
