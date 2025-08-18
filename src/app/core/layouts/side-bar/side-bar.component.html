@@ -29,8 +29,11 @@
                     type="button" [attr.data-bs-toggle]="'collapse'"
                     [attr.data-bs-target]="'#collapse-sport-' + sport.id"
                     [attr.aria-controls]="'collapse-sport-' + sport.id" aria-expanded="false">
-                    <img *ngIf="sport.icon" [src]="sport.icon" alt="{{sport.sportName}}" class="item-icon" />
-                    <span>{{ sport.sportName }}</span>
+                    <div>
+                        <img *ngIf="sport.icon" [src]="sport.icon" alt="{{sport.sportName}}" class="item-icon" />
+                        <span class="ms-3">{{ sport.sportName }}</span>
+                    </div>
+                    
                     
                     <i class="bi bi-chevron-down toggle-icon" aria-hidden="true"></i>
                 </button>
@@ -63,9 +66,9 @@
                                         <div [id]="'collapse-comp-' + comp.id"
                                             class="collapse mt-1 ps-3 small text-muted">
                                             <div *ngIf="(comp.events || []).length; else noEvents">
-                                                <div *ngFor="let ev of comp.events" class="py-1">
+                                                <a *ngFor="let ev of comp.events" class="py-1">
                                                     {{ ev.home }} vs {{ ev.away }} — {{ ev.startTime | date:'short' }}
-                                                </div>
+                                                </a>
                                             </div>
                                             <ng-template #noEvents>
                                                 <div class="text-muted">No events</div>

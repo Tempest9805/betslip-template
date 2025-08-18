@@ -32,3 +32,10 @@
     font-weight: 400s;
     
 }
+
+
+button[aria-expanded="true"] .toggle-icon,
+a[aria-expanded="true"] .toggle-icon {
+    transform: rotate(180deg);
+
+}

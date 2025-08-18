@@ -9,14 +9,21 @@
             "eventId": "ev-x1",
             "home": "Arsenal",
             "away": "City",
-            "icon": "assets/img/basket-ball.svg",
+            "icon": "assets/img/sidebar-icons/play.svg",
             "sport": "Soccer"
         },
         {
             "eventId": "ev-x2",
             "home": "Lakers",
             "away": "Warriors",
-            "icon": "assets/img/basket-ball.svg",
+            "icon": "assets/img/sidebar-icons/stop.svg",
+            "sport": "Basketball"
+        },
+        {
+            "eventId": "ev-x3",
+            "home": "Lakers",
+            "away": "Warriors",
+            "icon": "assets/img/sidebar-icons/video.svg",
             "sport": "Basketball"
         }
     ],
@@ -124,7 +131,7 @@
         {
             "sportId": "soccer",
             "sportName": "Soccer",
-            "icon": "soccer-ball",
+            "icon": "assets/img/sidebar-icons/soccer.svg",
             "leagues": [
                 {
                     "leagueId": "eng_premier",
@@ -268,7 +275,7 @@
         {
             "sportId": "basketball",
             "sportName": "Basketball",
-            "icon": "basket-ball",
+            "icon": "assets/img/sidebar-icons/basket.svg",
             "leagues": [
                 {
                     "leagueId": "nba",
@@ -335,7 +342,7 @@
         {
             "sportId": "tennis",
             "sportName": "Tennis",
-            "icon": "tennis",
+            "icon": "assets/img/sidebar-icons/Tennis.svg",
             "leagues": [
                 {
                     "leagueId": "atp",
