@@ -53,7 +53,7 @@
                             <div [id]="'collapse-league-' + league.id" class="collapse mt-1 ps-3">
                                 <ul class="list-container mb-0">
                                     <li *ngFor="let comp of (league.competitions || []); trackBy: trackById"
-                                        class="mb-1 line">
+                                        class="mb-1 line line-drop-3">
                                         <button
                                             class="btn btn-xxs btn-link d-flex justify-content-between align-items-center w-100 p-0 text-start p-2 item"
                                             type="button" [attr.data-bs-toggle]="'collapse'"
@@ -66,7 +66,7 @@
                                         <div [id]="'collapse-comp-' + comp.id"
                                             class="collapse mt-1 ps-3 small text-muted">
                                             <div *ngIf="(comp.events || []).length; else noEvents">
-                                                <a *ngFor="let ev of comp.events" class="py-1">
+                                                <a href="#" *ngFor="let ev of comp.events" class="p-2 d-flex align-items-center gap-2 text-decoration-none">
                                                     {{ ev.home }} vs {{ ev.away }} — {{ ev.startTime | date:'short' }}
                                                 </a>
                                             </div>
