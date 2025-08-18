@@ -1,3 +1,22 @@
+.app-sidebar {
+    position: sticky; 
+    max-height: 85dvh ;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    background: transparent; 
+}
+
+.app-sidebar::-webkit-scrollbar { width: 10px; }
+.app-sidebar::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.12);
+    border-radius: 8px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+.app-sidebar::-webkit-scrollbar-track { background: transparent; }
+
 .block-header{
     color: var(--bs-body-tertiary-color);   
     background: var(--bs-body-secundary-bg);
