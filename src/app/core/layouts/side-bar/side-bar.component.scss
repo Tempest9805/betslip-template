@@ -38,7 +38,7 @@
 .list-container .line{
     border-bottom: 1px solid var(--bs-li-border-color);
     text-decoration: none;
-    
+    border-radius: 8px;
 }
 
 .collapse-bg{
@@ -61,4 +61,9 @@ a[aria-expanded="true"] .toggle-icon {
 
 .btn-sm {
     font-weight: bold;
+}
+
+.sidebar-block{
+    border-radius: 8px;
+    background: var(--bs-background-color);
 }

@@ -34,5 +34,6 @@ export class SideBarComponent {
   isExternal(route?: string): boolean {
     return !!route && (route.startsWith('http://') || route.startsWith('https://') || route.startsWith('//'));
   }
+  
 
 }
