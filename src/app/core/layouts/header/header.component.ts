@@ -50,7 +50,7 @@ export class HeaderComponent implements OnInit {
     }
   }
   get currentLanguage(): string {
-    return this.translate.currentLang;
+    return this.translate.getCurrentLang();
   }
 
   changeLanguage = (lang: string) => this.languageService.setLanguage(lang);
