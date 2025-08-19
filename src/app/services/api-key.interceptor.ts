@@ -7,7 +7,7 @@ export const apiKeyInterceptor: HttpInterceptorFn = (request: HttpRequest<any>, 
         {
             setHeaders: {
                 'Authorization': ('Token '+sessionStorage.getItem('userToken')),
-                apikey: 'dev'
+                // apikey: 'dev'
             }
         }
     );

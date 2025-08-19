@@ -1,4 +1,4 @@
-// src/app/services/navigation.service.ts
+
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { of } from 'rxjs';
@@ -29,6 +29,7 @@ export class NavigationService {
   getOtherLinks() { return this.getCollection('otherLinks', true); }
   getEventsOfDay() { return this.getCollection('eventsOfDay', true); }
   getAll() { return this.data$; }
+  
   getById(collectionKey: string, id: string) {
     return this.getCollection(collectionKey).pipe(map(items => (items || []).find((x: any) => x.id === id)));
   }

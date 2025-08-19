@@ -60,8 +60,7 @@ export class HeaderComponent implements OnInit {
   }
 
   clearSessionData() {
-    localStorage.removeItem('betList');
-    localStorage.removeItem('storedAmount');
+
   }
 
   ngOnDestroy() {

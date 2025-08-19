@@ -16,9 +16,6 @@ export class AuthService {
   logout() {
     updateSessionStorageForGuard(false);
     sessionStorage.clear();
-    localStorage.removeItem('betList');
-
-    localStorage.removeItem('storedAmount');
 
     this.route.navigate(['/login']);
   }
