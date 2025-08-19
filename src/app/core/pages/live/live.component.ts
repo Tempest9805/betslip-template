@@ -63,13 +63,4 @@ export class LiveComponent {
   }
 
 
-  async loadTillData() {
-    this.subscription$.add(this.apiService.tillData
-      .subscribe((resp) => {
-        if (resp) {
-          this.tillData = resp;
-        }
-      }));
-  }
-
 }

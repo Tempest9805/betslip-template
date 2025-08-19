@@ -19,7 +19,7 @@ export class AccessDeniedComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.features = this.apiService.GetLicenceFeatures();
+    
   }
 
   backToStart() {

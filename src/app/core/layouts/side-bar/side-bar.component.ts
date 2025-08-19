@@ -19,8 +19,10 @@ import { NavigationService } from '../../../services/navigation.service';
   styleUrl: './side-bar.component.scss'
 })
 export class SideBarComponent {
-
+  private api = inject(ApiService);
   private nav = inject(NavigationService);
+
+  
 
   sports$: Observable<any[]> = this.nav.getCollection('sportsCategories', true);
   otherLinks$ = this.nav.getCollection('otherLinks', true);

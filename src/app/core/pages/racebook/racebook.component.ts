@@ -48,21 +48,13 @@ export class RacebookComponent implements OnInit {
   ngOnInit(): void {
     const storedData = sessionStorage.getItem('userData');
     this.storedPlayer = storedData ? JSON.parse(storedData) : '';
-    this.loadTillData();
+
 
     // Sanitiza la URL del iframe
     const url = `//HorsesRedirect.betimages.com/horsesredirect.aspx?siteid=Jazz&DSSWP=${this.storedPlayer.Player}&NGL=${this.storedPlayer.Password}&XFP=DefaultWhite`;
     this.safeHorsesUrl = this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
-  async loadTillData() {
-    this.subscription$.add(this.apiService.tillData
-      .subscribe((resp) => {
-        if (resp) {
-          this.tillData = resp;
-        }
-      }));
-  }
 
 
 

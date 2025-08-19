@@ -12,21 +12,6 @@ export class ApiService {
     private _selectedLeagues = new BehaviorSubject<any>(null);
     readonly selectedLeagues = this._selectedLeagues.asObservable();
 
-    private _printSelectedLeagues = new BehaviorSubject<any>(null);
-    readonly printSelectedLeagues = this._printSelectedLeagues.asObservable();
-
-    private _licenceFeatures = new BehaviorSubject<any>(null);
-    readonly licenceFeatures = this._licenceFeatures.asObservable();
-
-    private _tillData = new BehaviorSubject<any>(null);
-    readonly tillData = this._tillData.asObservable();
-
-    private _taxes = new BehaviorSubject<any>(null);
-    readonly taxes = this._taxes.asObservable();
-
-
-    private _sessionAmount = new BehaviorSubject<number>(0);
-    readonly sessionAmount = this._sessionAmount.asObservable();
 
 
     constructor(private http: HttpClient) { }
@@ -49,32 +34,5 @@ export class ApiService {
         this._selectedLeagues.next(request);
     }
 
-    setPrintSelectedLeagues(request: any) {
-        this._printSelectedLeagues.next(request);
-    }
-
-    SetLicenceFeatures(request: any) {
-        this._licenceFeatures.next(request);
-    }
-
-    GetLicenceFeatures(): any {
-        return this._licenceFeatures.value;
-    }
-
-    SetTillData(request: any) {
-        this._tillData.next(request);
-    }
-
-    SetTaxes(request: any) {
-        this._taxes.next(request);
-    }
-
-    GetTaxes(): any {
-        return this._taxes.value;
-    }
-
-    SetSessionAmount(request: number) {
-        this._sessionAmount.next(request);
-    }
 
 }

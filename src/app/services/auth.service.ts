@@ -15,14 +15,10 @@ export class AuthService {
 
   logout() {
     updateSessionStorageForGuard(false);
-    this.apiService.SetLicenceFeatures(null);
     sessionStorage.clear();
-    this.linesService.removeAllBets();
     localStorage.removeItem('betList');
 
     localStorage.removeItem('storedAmount');
-
-    this.apiService.SetSessionAmount(0);
 
     this.route.navigate(['/login']);
   }

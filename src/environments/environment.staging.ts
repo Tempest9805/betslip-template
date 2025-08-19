@@ -1,7 +1,7 @@
 export const environment = {
     production: false,
-    linesApiUrl: "",
+    linesApiUrl: "https://staging.gamemecanica.net/betslip-srv/",
     apiUrl: '',
-    apiKey: "dev",
+    apiKey: "",
     disableGuard: true
 };
