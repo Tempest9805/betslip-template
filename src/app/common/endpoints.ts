@@ -1,5 +1,6 @@
 export enum PostMethods {
-    GET_ACTIVE_LEAGUES = 'lines/GetSplitSchedule',
+    GET_LINES = 'lines/GetSplitSchedule',
+    GET_MENU_LEAGUES = 'Lines/GetMenuLeagues',
 }
 
 export enum AuthMethods {

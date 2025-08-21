@@ -12,12 +12,10 @@ export class ApiService {
     private _selectedLeagues = new BehaviorSubject<any>(null);
     readonly selectedLeagues = this._selectedLeagues.asObservable();
 
-
-
     constructor(private http: HttpClient) { }
 
-    apiPostMethod(url: string, body: any): Observable<any> {
-        return this.http.post<any>(url, body);
+    apiPostMethod(url: string, body: any, options?: any): Observable<any> {
+        return this.http.post<any>(url, body, options);
     }
 
     apiGetMethod(url: string): Observable<any> {

@@ -1,41 +1,55 @@
-import { Component, inject, OnInit, ViewChild } from '@angular/core';
-import { RouterLink, RouterModule } from '@angular/router';
-import { environment } from '../../../../environments/environment';
-import { PostMethods } from '../../../common/endpoints';
-import { Observable, Subscription } from 'rxjs';
-import { ApiService } from '../../../services/api.service';
+import { Component, inject, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
-import { NavigationService } from '../../../services/navigation.service';
 
+import { NavigationService } from '../../../services/navigation.service';
+import { LinesService } from '../../../services/lines.service';
 
 @Component({
   selector: 'app-side-bar',
-  imports: [ CommonModule, FormsModule,
-    TranslateModule, RouterModule],
   standalone: true,
+  imports: [ CommonModule, FormsModule, TranslateModule, RouterModule ],
   templateUrl: './side-bar.component.html',
   styleUrl: './side-bar.component.scss'
 })
-export class SideBarComponent {
-  private api = inject(ApiService);
+export class SideBarComponent implements OnInit {
   private nav = inject(NavigationService);
+  private lines = inject(LinesService);
 
-  
-
-  sports$: Observable<any[]> = this.nav.getCollection('sportsCategories', true);
+  eventsOfDay$ = this.nav.getCollection('eventsOfDay', true);
   otherLinks$ = this.nav.getCollection('otherLinks', true);
   subHeader$ = this.nav.getSubheaderItems();
-  eventsOfDay$ = this.nav.getEventsOfDay()
-  
+
+  sports$!: Observable<any[]>;
+
+  ngOnInit(): void {
+    const stored = sessionStorage.getItem('userData');
+  const player = stored ? JSON.parse(stored) : null;
+
+  const body = {
+    Gmt: -100,
+    NextHour: false,
+    LiveWager: false,
+    Ip: '170.81.34.2',
+    SiteId: 1,
+    IdPlayer: player?.IdPlayer ?? 259818,
+    LeagueList: [40,82,269,385,644,791,2037,2035,2374], 
+    SourceDb: 0
+  };
+
+  this.lines.getSplitSchedule(body).subscribe(res => {
+    console.log('API response recibido en componente:', res);
+  });
+  }
+
   trackById(_: number, item: any) {
-    return item?.id ?? item?.sportId ?? item?.leagueId ?? item?.competitionId ?? item?.route ?? item?.title ?? _;
+    return item?.id ?? item?.leagueId ?? item?.competitionId ?? _;
   }
 
   isExternal(route?: string): boolean {
     return !!route && (route.startsWith('http://') || route.startsWith('https://') || route.startsWith('//'));
   }
-  
-
 }
